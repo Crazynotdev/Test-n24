@@ -1,5 +1,5 @@
 <?php
-
+require_once __DIR__.'/../includes/env.php';
 $host = getenv('DB_HOST');
 $port = getenv('DB_PORT');
 $db   = getenv('DB_DATABASE');
