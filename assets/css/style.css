@@ -1,0 +1,97 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #0b0719, #1a1a2f, #0f0c1f);
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite;
+    color: white;
+}
+
+@keyframes gradientShift {
+    0% {background-position:0% 50%;}
+    50% {background-position:100% 50%;}
+    100% {background-position:0% 50%;}
+}
+
+header {
+    text-align: center;
+    padding: 2rem 0;
+    background-color: rgba(0,0,0,0.4);
+    box-shadow: 0 0 10px rgba(255,215,0,0.3);
+}
+
+nav a {
+    color: gold;
+    margin: 0 1rem;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+nav a:hover {
+    color: #fff;
+    text-shadow: 0 0 10px gold;
+}
+
+main {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background: rgba(20,20,30,0.7);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+input, select, button {
+    width: 100%;
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 10px;
+    border: 1px solid gold;
+    background: rgba(255,255,255,0.05);
+    color: white;
+    font-size: 1rem;
+}
+
+button {
+    background: linear-gradient(135deg, rgba(255,215,0,0.2), rgba(255,215,0,0.1));
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: linear-gradient(135deg, rgba(255,215,0,0.3), rgba(255,215,0,0.2));
+    box-shadow: 0 0 20px gold;
+    transform: translateY(-2px);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 2rem;
+}
+
+th, td {
+    padding: 1rem;
+    border: 1px solid gold;
+    text-align: center;
+}
+
+.logo {
+    display: block;
+    margin: 0 auto 2rem auto;
+    max-width: 200px;
+    filter: drop-shadow(0 0 20px rgba(255,215,0,0.5));
+    animation: logoFloat 3s ease-in-out infinite;
+}
+
+@keyframes logoFloat {
+    0%,100% {transform: translateY(0);}
+    50% {transform: translateY(-10px);}
+}
+
+@media (max-width:600px){
+    main {padding:1rem;}
+    input, select, button{padding:0.8rem;}
+}
